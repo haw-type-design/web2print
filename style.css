@@ -1,0 +1,85 @@
+@font-face {
+    font-family: CM;
+    src: url("fonts/cmunrm.ttf");
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: monono;
+    src: url("fonts/monono-Regular.otf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: FABLAB;
+    src: url("fonts/fablab-webfont.woff2");
+    font-display: swap;
+}
+
+
+:root{
+    --background: #002db3;
+    --positive: #002db3;
+    --negative: #ff6600;
+}
+
+body { 
+    font-family: CM; 
+    color: var(--negative);
+}
+r {color: red;}
+g {color: limegreen;}
+o {color: coral;}
+
+.remark-slide-content {
+    background-color: var(--background);
+    padding: 36px 48px;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+h1 {
+    font-family: FABLAB;
+    text-transform: uppercase;
+    font-size: 56px !important;
+    line-height: 1;
+    margin: 0;
+}
+
+ul {
+    font-size: 24px !important;
+}
+
+
+p, li {
+    font-size: 36px;
+    margin: 0;
+}
+
+
+
+img {
+    width: 100%;
+}
+
+
+
+.remark-code, .remark-inline-code { 
+    font-family: monono; 
+    background-color: var(--negative);
+    color: var(--positive);
+    font-size: 20px;
+    padding: 0 12px 0 8px;
+    display: table;
+}
+.remark-slide-number {
+    display: none;
+}
+
+
+.right {
+    width: 50%;
+}
