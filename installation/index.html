@@ -94,14 +94,10 @@
             * try a few commands: 
             
             --
-            
                 * `touch filename.extension` creates file named `filename` with extension `extension` in the current folder
                 * `mkdir directory` creates folder `directory` in the current directory
                 * `command -h` or `man command` opens the manual of the command (please insert a command like `ls`)
-        
-            ???
             
-            For man page type q to exit
             
             ---
             
@@ -157,27 +153,38 @@
             
             ---
             
-            # Plancton Editor
+            # Setting up tools
             
-            * `git clone https://github.com/haw-type-design/plancton-editor.git`
+            There are two ways to embed paged.js into your site:
             
+            * using a CDN `<script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>`
+            
+            or
+            
+            * by downloading paged.js and manually embed it to your site from `https://gitlab.coko.foundation/pagedjs/pagedjs/`
             
             ---
             
             
-            # Quitting / Launching Plancton again
+            # A server on your machine
             
-            ## Launching Plancton again
+            your browser blocks some request when you access your site manually (i.e. opening your `index.html` in your browser)
             
-            * move to your plancton folder in Terminal i.e. Command and drag it to your Terminal
-            
-            * run the following commands in Terminal:
+            * Python to the help. Open a Terminal window at the source folder of your files (CMD + drag it to your Terminal):
                 
-                * `source plancton-env/bin/activate`
+                * `python3 -m http.server` to launch the server, which runs at `localhost:8000`
                 
-                * `python plancton-server.py`
+                * `^ + C` to quit
             
+            ---
             
+            # Playing around
+            
+            * once embedded you can start to play around with paged.js
+            
+            * have a look at their demo repos [here](https://gitlab.coko.foundation/pagedjs/starter-kits)
+            
+            * go and see the manual [here](../manual)
            
             
         </textarea>
