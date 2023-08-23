@@ -15,17 +15,17 @@
             ---
 
             # Agenda
-            
-            
+
+
             --
             1. Starting
-            
+
             --
             2. More advanced stuff 
-            
+
             --
             3. Even more advanced stuff 
-            
+
             --
             4. Extending
 
@@ -38,26 +38,50 @@
             --
 
             * Up and running? Nice!
-            
+
             ---
-            
+
             # Starting
-            
+
             * download or clone the example file structure which is set up (here)[../sample-file-structure]
-            
+
             --
-            
+
             * it includes to stylesheets in the `css` folder:
-            
+
                 * `style-print.css`
                 * `style-web.css`
+
+            --
+
+            * we can start to define style rules for print and web separately from now on
+
+            ---
+
+            # Starting
+
+            --
+            
+
+            * Let’s start to take a look at the anatomy of our pages:
+            
+            .remark-code-multi[```
+            @page {
+                size: 148mm 210mm;
+                margin-top: 10mm;
+                margin-right: 10mm;
+                margin-bottom: 20mm;
+                margin-left: 30mm;
+            }
+            ```]
             
             --
             
-            * we can start to define style rules for print and web separately from now on
+            * The `@page` rules in CSS allow us to specify what the page looks like, when we hit _print_
             
-           
-            
+            * In this case, we defined the page size and the page margins
+            ---
+
         </textarea>
         <script src="https://remarkjs.com/downloads/remark-latest.min.js">
         </script>
