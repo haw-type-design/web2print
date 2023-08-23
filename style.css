@@ -4,6 +4,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: LeagueGothicItalic;
+    src: url("fonts/LeagueGothic-CondensedItalic.woff2");
+    font-feature-settings: "kern";
+    font-style: italic;
+    font-display: swap;
+}
+
 
 @font-face {
     font-family: monono;
@@ -50,6 +58,11 @@ h1 {
     margin: 0;
 }
 
+
+em {
+    font-family: LeagueGothicItalic;
+}
+
 ul {
     font-size: 24px !important;
 }
@@ -79,10 +92,18 @@ a {
     color: var(--positive);
     font-size: 20px;
     padding: 12px 8px 12px 8px;
-    display: inline;
     vertical-align: middle;
     margin: 0 4px;
 }
+
+.remark-inline-code {
+    display: inline;
+}
+
+.remark-code{
+    display: table;
+}
+
 .remark-slide-number {
     display: none;
 }
