@@ -112,3 +112,9 @@ a {
 .right {
     width: 50%;
 }
+
+
+.left img {
+    width: auto;
+    max-height: 75vh;
+}

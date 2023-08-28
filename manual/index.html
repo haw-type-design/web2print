@@ -62,8 +62,18 @@
 
             --
             
+            * In HTML we can make use of media queries, that define layout rules for specific media types (i.e. screen sizes.)
+            
+            * One of such rules is the `@media print {}` query, that is used when we try to print the page
+            
+            * All of our styles destined for print will go inside this media query
+            
+            ---
 
-            * Let’s start to take a look at the anatomy of our pages:
+            # Starting
+
+            --
+            * Next: let’s start to take a look at the anatomy of our pages:
             
             .remark-code-multi[```
             @page {
@@ -79,9 +89,73 @@
             
             * The `@page` rules in CSS allow us to specify what the page looks like, when we hit _print_
             
-            * In this case, we defined the page size and the page margins
+            * In this case, we defined the page size and its margins
             ---
+            
+            #Starting
+            
+            --
+            
+            * Since not all pages are the same, we can define different layout for left and right pages:
+            
+            .remark-code-multi[```
+            @page:left {
+                margin-right: 10mm;
+                margin-left: 30mm;
+            }
+            @page:right {
+                margin-right: 30mm;
+                margin-left: 10mm;
+            }
+            ```]
+            
+            ---
+            
+            #Starting
+            
+            --
+            
+            * You can also prepare pdfs for printing with bleed:
+            
+            .remark-code-multi[```
+            @page {
+                bleed: 3mm;
+            }
+            ```]
+            
+            and crop marks to better cut your printouts:
+            
+            .remark-code-multi[```
+            @page {
+                marks: crop;
+            }
+            ```]
+            
+            ---
+            
+            #Starting
+            
+            --
+            
+            * paged.js uses pre-set margin boxes that are usable to fill in content
 
+            .left[![Image of w3c margin boxes](../assets/img/margin-boxes.png)]
+            
+            ---
+            
+            * These can be targeted using the corresponding @-rule:
+            
+            
+            .remark-code-multi[```
+            @page: right {
+                @top-right {
+                    content: "My title";
+                }
+            }
+            ```]
+            
+            
+            
         </textarea>
         <script src="https://remarkjs.com/downloads/remark-latest.min.js">
         </script>
