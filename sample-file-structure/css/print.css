@@ -1,0 +1,114 @@
+@media print {
+
+    /* Size and marin for all pages ------------- */
+    @page {
+        size: 80mm 110mm;
+        margin-top: 5mm;
+        margin-bottom: 10mm;
+        font-family: "Times";
+    }  
+
+
+    /* LEFT PAGES -------------------------------- */
+
+    @page:left {
+        margin-left: 6mm;
+        margin-right: 6mm;
+        @left-top {
+            content: counter(page);
+            width: auto;
+        }
+        @bottom-center{
+            text-align: left;
+        }
+    }
+
+
+    /* RIGHT PAGES -------------------------------- */
+
+    @page:right {
+        margin-left: 6mm;
+        margin-right: 6mm;
+        @right-top {
+            content: counter(page);
+            width: auto;
+        }
+        @bottom-center{
+            /*content: string(chapTitle);*/
+            text-align: right;
+        }
+    }
+
+    /*.chapter  h1 { string-set: chapTitle content(text); }*/
+
+
+
+    /* BLANK PAGES -------------------------------- */
+
+    @page:blank {
+        @left-top { content: none; }
+        @bottom-center { content: none; }
+        @right-top { content: none; }
+    }
+
+
+
+    /* COUVERTURE -------------------------------- */
+
+    @page:first{
+        @right-top { content: none; }
+    }
+
+    #cover { 
+        break-after: right; 
+    }
+
+    #cover img{
+    }
+
+    .img-grid{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1mm;
+        width: 100%;
+    }
+
+    .img-grid-wide{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        justify-items: center;
+        height: 100%;
+        align-items: top;
+    }
+    /* SECTION BREAKS -------------------------------- */
+
+    .chapter {
+        break-before: right;
+    }
+
+
+
+    /* CONTENT --------------------------------------- */
+
+    figure, img{
+        width: 100%;
+        display: block;
+    }
+
+    p, h1{
+        margin: 0;
+    }
+    h1{
+        font-size: 16pt;
+        line-height: 0.9;
+        margin-bottom: 1mm;
+    }
+    
+    p{
+        font-size: 10pt;
+        letter-spacing: 0.01em;
+    }
+}
+
+

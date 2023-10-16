@@ -1,0 +1,16 @@
+body{
+    font-family: "Arial";
+}
+
+#content{
+    padding: 20px;
+}
+
+#cover h1 {
+    font-family: Amiamie;
+}
+
+img{
+    max-width: 400px;
+}
+
