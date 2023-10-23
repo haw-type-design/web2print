@@ -1,0 +1,98 @@
+@font-face {
+    font-family: monono;
+    src: url(../../fonts/monono-Regular.otf);
+}
+
+:root {
+    --main-color: white;
+    --main-width: 960px;
+    --slider-width: 720px;
+    --main-height: 360px;
+    --image-height: 50vh;
+    --h1: 36px;
+    --h1-leading: 36px;
+    --h2: 24px;
+    --body: 16px;
+    --line-height: 1.2rem;
+    --letter-spacing: 0.04rem;
+
+    --gap: 48px;
+
+    --space-xxs: 8px;
+    --space-xs: 16px;
+    --space-s: 24px;
+    --space-m: 48px;
+    --space-l: 96px;
+    --space-xl: 196px;
+
+    --highlight: oklch(85.88% 0.286 142.94);
+    --text: black;
+    --secondary: grey;
+    --background: oklch(97.65% 0.042 142.94 / 70.35%)
+}
+
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: var(--main-width);
+    margin: var(--space-s) auto;
+    padding: 0;
+    background-color: var(--background);
+    font-family: monono;
+    font-size: var(--body);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    scroll-behavior: smooth;
+}
+
+main {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+main > *{
+    border-top: 4px solid var(--highlight);
+}
+
+main > *:nth-child(1) {
+    border-top: 0 !important;
+}
+
+h1, p, section {
+    padding: var(--space-s) 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--h1);
+    line-height: var(--h1-leading);
+}
+
+a {
+    color: var(--highlight);
+    text-decoration-color: var(--highlight);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1.5px;
+}
+
+ul {
+    margin: 0 var(--space-xs);
+    padding: 0;
+    padding-top: var(--space-s);
+}
+
+li {
+    padding-bottom: var(--space-xxs);
+}
+
+li:last-child {
+    padding-bottom: 0;
+}
+
+@media only screen and (max-width: 1080px) {
+    :root {
+        --main-width: 90%;
+    }
+}
