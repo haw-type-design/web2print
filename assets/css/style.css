@@ -18,6 +18,7 @@
 
     --gap: 48px;
 
+    --space-xxxs: 4px;
     --space-xxs: 8px;
     --space-xs: 16px;
     --space-s: 24px;
@@ -73,6 +74,8 @@ menu {
 
 .other {
     justify-self: end;
+    display: flex;
+    gap: var(--space-m);
 }
 
 h1, h2, h4, p, section {
@@ -105,6 +108,16 @@ li {
 
 li:last-child {
     padding-bottom: 0;
+}
+
+code {
+    background-color: oklch(83.24% 0.123 54);
+    padding: var(--space-xxxs) var(--space-xxs);
+    font-family: monono;
+}
+
+p + ul {
+    padding-top: 0px;
 }
 
 .spacer-m{
