@@ -60,9 +60,25 @@ main > *:nth-child(1) {
     border-top: 0 !important;
 }
 
-h1, p, section {
+menu {
+    border-top: 1px solid black;
+    position: fixed;
+    bottom: 0px;
+    padding: 0;
+    padding-top: var(--space-xs);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: var(--main-width);
+}
+
+.other {
+    justify-self: end;
+}
+
+h1, h2, h4, p, section {
     padding: var(--space-s) 0;
     margin: 0;
+    font-weight: normal !important;
 }
 
 h1 {
@@ -89,6 +105,11 @@ li {
 
 li:last-child {
     padding-bottom: 0;
+}
+
+.spacer-m{
+    padding-top: var(--space-m);
+    border-top: none;
 }
 
 @media only screen and (max-width: 1080px) {
