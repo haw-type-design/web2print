@@ -142,4 +142,23 @@ section {
     :root {
         --main-width: 90%;
     }
+    menu {
+        width: calc(var(--main-width) - 10%);
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    :root {
+        --main-width: calc(100% - var(--space-xs));
+    }
+    menu {
+        width: calc(100% - 32px);
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-gap: var(--space-s);
+    }
+
+    .other {
+        justify-self: start;
+    }
 }
