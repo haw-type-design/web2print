@@ -72,10 +72,15 @@ menu {
     width: var(--main-width);
 }
 
+.weeks {
+    display: flex;
+    gap: var(--space-s);
+}
+
 .other {
     justify-self: end;
     display: flex;
-    gap: var(--space-m);
+    gap: var(--space-s);
 }
 
 h1, h2, h4, p, section {
@@ -118,6 +123,14 @@ code {
 
 p + ul {
     padding-top: 0px;
+}
+
+li > ul {
+    padding-top: var(--space-xxxs);
+}
+
+section {
+    padding: var(--space-s) 0 var(--space-m) 0;
 }
 
 .spacer-m{
