@@ -74,7 +74,8 @@ menu {
 
 .weeks {
     display: flex;
-    gap: var(--space-s);
+    gap: var(--space-xs) var(--space-s);
+    flex-wrap: wrap;
 }
 
 .other {
