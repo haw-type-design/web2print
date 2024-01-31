@@ -137,9 +137,14 @@ async function fetcher(contentPath, filterTag){
         // filter if needed
         if(filterTag){
             parseContent = parseContent.querySelector(filterTag).innerHTML;
+            console.log("Document " + contentPath + " added to book");
             return parseContent;
         }
-        console.log("Document" + contentPath + " added to book");
+        // default to body to strip all screen.css
+        else {
+            html = parseContent.querySelector("body").innerHTML;
+        }
+        console.log("Document " + contentPath + " added to book");
         return html;
     })
     .catch(function(err) {  
