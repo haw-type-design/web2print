@@ -118,3 +118,7 @@ a {
     width: auto;
     max-height: 75vh;
 }
+
+.red {
+    color: red;
+}

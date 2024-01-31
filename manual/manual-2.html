@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Printed matter from your browser — getting started</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <textarea id="source">
+
+            class: middle
+
+            # Printed matter from your browser > Manual II
+
+            ---
+
+            # Agenda
+
+
+            --
+            1. Recap
+
+            --
+            2. Sorting the mess
+
+            --
+            3. Questions
+
+            ---
+
+            # Recap
+
+            * If you haven’t embedded paged.js into your site or do not know how to run a local server please head [here](../installation)
+
+            --
+
+            * Up and running? Nice!
+
+            ---
+
+            # Sorting the mess
+
+            * if you have custom JavaScript please don’t just dump it into your `index.html`
+
+            ---
+
+            * think about a structure like so:
+            .remark-code-multi[```
+            bundle
+            |—— index.html
+            |—— css
+                &emsp;&emsp;&emsp;&emsp;|—— fonts.css
+                &emsp;&emsp;&emsp;&emsp;|—— screen.css
+                &emsp;&emsp;&emsp;&emsp;|—— print.css
+                &emsp;&emsp;&emsp;&emsp;|—— pagedjs
+            |—— js
+                &emsp;&emsp;&emsp;&emsp;|—— handlers.js
+                &emsp;&emsp;&emsp;&emsp;|—— interface.js
+                &emsp;&emsp;&emsp;&emsp;|—— paged.esm.js
+                &emsp;&emsp;&emsp;&emsp;|—— script.js
+                &emsp;&emsp;&emsp;&emsp;|—— main.js
+            ```]
+
+            --
+
+            * put your custom js in a single file like `main.js` (or name it whatever you want)
+
+            ---
+            
+            # Sorting the mess
+            
+            * you can now link the file in your `index.html` using a script tag:
+            .remark-code-multi[```
+            <script src="js/main.js"></script>
+            ```]
+            
+            ---
+            # Questions?
+            
+        </textarea>
+        <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+        </script>
+        <script>
+            var slideshow = remark.create();
+        </script>
+    </body>
+</html>
